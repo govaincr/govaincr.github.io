@@ -1,0 +1,184 @@
+/*general*/
+#curiculum{
+    width: 100%;
+    display: flex;
+}
+
+.evaluation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.evaluation_point{
+    aspect-ratio: 1/1;
+    width: 20px;
+    border-radius: 1000px;
+    background-color: red;
+    margin-right: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.checked_pt{
+    background-color: red;
+}
+.unchecked_pt{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/*-----------------------------------------------------------------------*/
+
+/*personal info*/
+#personal_info{
+    width: 21%;
+    padding: 60px 2%;
+    min-height: 500px;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#profile_picture{
+    width: 80%;
+}
+.personal_info_section{
+    width: 95%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.personnal_info_section_hr{
+    margin: 0 0 10px;
+}
+
+.personal_info_non_illustrated{
+    font-size: 25px;
+    color: white;
+    margin: 10px 0;
+}
+.personal_info_illustrated{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.personal_info_illustrated img{
+    aspect-ratio: 1/1;
+    width: 40px;
+    margin-right: 10px;
+}
+.personal_info_illustrated p{
+    font-size: 25px;
+    color: white;
+    margin: 0;
+}
+.personal_info_illustrated a{
+    font-size: 25px;
+    color: white;
+    margin: 0;
+}
+
+.language, .skill{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.language p, .skill p{
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    width: 130px;
+}
+/*-----------------------------------------------------------------------*/
+
+/*cv*/
+#cv{
+    width: 71%;
+    padding: 60px 2%;
+    height: 1000px;
+}
+
+.cv_section{
+    margin-bottom: 60px;
+}
+
+.education{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.education p, .education a{
+    font-size: 25px;
+    color: white;
+}
+.education_title{
+    font-weight: bold;
+    margin: 0 10px 0 0;
+}
+.education_school{
+    margin: 0;
+}
+
+.work_experience{
+    margin-bottom: 30px;
+}
+.work_experience_title{
+    font-size: 27.5px;
+    color: white;
+    margin: 10px 0;
+    font-weight: bolder;
+}
+.work_experience_description{
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    text-align: justify;
+}
+
+.award{
+    margin-bottom: 30px;
+}
+.award_title{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+}
+.award_description, .award_description a{
+    font-size: 25px;
+    text-align: justify;
+    margin: 0;
+    color: white;
+}
+/*-----------------------------------------------------------------------*/
+
+@media(max-width:450px){
+    /*general*/
+    #curiculum{
+        display: block;
+    }
+    
+    .evaluation_point{
+        width: 17.5px;
+        margin-right: 3px;
+    }
+    /*-----------------------------------------------------------------------*/
+
+    /*personal info*/
+    #personal_info{
+        width: 90%;
+        padding: 75px 5%;
+    }
+    #profile_picture{
+        width: 65%;
+    }
+
+    .personal_info_section{
+        width: 95%;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+    /*-----------------------------------------------------------------------*/
+
+    /*cv*/
+    #cv{
+        width: 90%;
+        padding: 75px 5%;
+    }
+}
