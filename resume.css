@@ -22,7 +22,7 @@
     background-color: red;
 }
 .unchecked_pt{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.125);
 }
 /*-----------------------------------------------------------------------*/
 
@@ -51,12 +51,12 @@
 .personal_info_non_illustrated{
     font-size: 25px;
     color: white;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 .personal_info_illustrated{
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 .personal_info_illustrated img{
     aspect-ratio: 1/1;
@@ -77,7 +77,7 @@
 .language, .skill{
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 .language p, .skill p{
     color: white;
@@ -99,22 +99,28 @@
 }
 
 .education{
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
+    margin: 0 0 30px;
 }
-.education p, .education a{
-    font-size: 25px;
+.education_header{
+    display: flex;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+.education_header p, .education_header a{
+    font-size: 27.5px;
+    margin: 0;
     color: white;
 }
-.education_title{
-    font-weight: bold;
-    margin: 0 10px 0 0;
-}
-.education_school{
+.education_description{
+    font-size: 25px;
+    color: white;
+    text-align: justify;
     margin: 0;
 }
 
+#work_experience{
+    display: none;
+}
 .work_experience{
     margin-bottom: 30px;
 }
@@ -145,6 +151,20 @@
     text-align: justify;
     margin: 0;
     color: white;
+}
+#cv_download{
+    margin-top: 15px;
+    font-size: 22.5px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: 0.25s;
+}
+#cv_download:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px black;
 }
 /*-----------------------------------------------------------------------*/
 

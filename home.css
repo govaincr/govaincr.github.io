@@ -18,11 +18,11 @@ main p{
 
 @media(max-width:450px){
     main{
-        padding: 75px 0;
+        padding: 100px 0;
         width: 100%;
         height: auto;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
     }
     img{
         width: 60%;
