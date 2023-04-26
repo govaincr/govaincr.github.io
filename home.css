@@ -33,12 +33,19 @@ h2{
 header{
     padding: 0 3vw;
     height: 10vh;
-    background-color: #3f79ff;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 header img{
     height: 40px;
+}
+header select{
+    height: 35px;
+    aspect-ratio: 3/2;
+    border: 0;
+    font-size: 20px;
+    border-radius: 5px;
 }
 /*---------- header end ----------*/
 
@@ -224,7 +231,69 @@ header img{
     font-size: 35px;
     margin: 0 0 20px;
 }
-
+#comment_slider{
+    width: 60vw;
+    overflow: hidden;
+}
+#comments_holder{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.comment{
+    background-color: #1852fe;
+    aspect-ratio: 2/1;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.comment_header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 95%;
+}
+.comment_header img{
+    aspect-ratio: 1/1;
+    height: inherit;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+.comment_header p{
+    margin: 5px 0;
+    font-size: 25px;
+}
+.commentor_name{
+    font-weight: bold;
+}
+.comment_content{
+    font-size: 25px;
+    text-align: justify;
+    width: 95%;
+    margin: 0;
+    height: 65%;
+}
+#comment_navigator{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+#comment_navigator div{
+    aspect-ratio: 1/1;
+    width: 20px;
+    margin: 5px 8px 0;
+    padding: 0;
+    border: 2px solid #1852fe;
+    border-radius: 1000px;
+}
+.current_comment{
+    background-color: #1852fe;
+}
 /*---------- comments end ----------*/
 
 /*---------- team start ----------*/
@@ -526,6 +595,13 @@ footer{
     }
     /*---------- flexing end ----------*/
 
+    /*---------- comments start ----------*/
+    #comment_slider{
+        width: 70vw;
+        overflow: hidden;
+    }
+    /*---------- comments end ----------*/
+
     /*---------- contact start ----------*/
     #contact_content{
         flex-direction: column;
@@ -550,7 +626,7 @@ footer{
     /*---------- team end ----------*/
 }
 
-/*big tablet styling*/
+/*regular tablet styling*/
 @media(max-width:850px){
     /*---------- presentation start ----------*/
     #presentation img{
@@ -607,6 +683,12 @@ footer{
         filter: grayscale(0%);
     }
     /*---------- flexing end ----------*/
+
+    /*---------- comments start ----------*/
+    #comment_slider{
+        width: 85vw;
+    }
+    /*---------- comments end ----------*/
 
     /*---------- team start ----------*/
     #team_text{
@@ -692,6 +774,34 @@ footer{
     }
     /*---------- flexing end ----------*/
 
+    /*---------- comments start ----------*/
+    #comment_slider{
+        width: 90vw;
+        overflow: hidden;
+    }
+    .comment{
+        aspect-ratio: auto;
+        padding: 30px 0;
+    }
+    .comment_header{
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+    .comment_header img{
+        height: 125px;
+        margin-right: 0px;
+    }
+    .comment_header p{
+        text-align: center;
+    }
+    .comment_content{
+        width: 90%;
+        margin: 0;
+        height: 300px;
+    }
+    /*---------- comments end ----------*/
+
     /*---------- team start ----------*/
     #team_text{
         font-size: 30px;
@@ -711,67 +821,11 @@ footer{
     footer{
         padding: 10vw;
     }
-    #footer_logo{
-        height: 50px;
-    }
-    #footer_socials{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        margin: 20px 0;
-    }
-    .footer_social{
-        color: #1852fe;
-        text-decoration: none;
-        transition: 0.5s;
-        overflow: hidden;
-        border-radius: 1000px;
-        width: 50px;
-        background-color: white;
-        margin-right: 15px;
-    }
-    .footer_social_content{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 225px;
-    }
     .footer_social:hover{
-        width: 225px;
-    }
-    .footer_social i{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        aspect-ratio: 1/1;
         width: 50px;
-        font-size: 30px;
-    }
-    .footer_social p, .footer_social a{
-        text-decoration: none;
-        font-size: 25px;
-        height: 50px;
-        width: 175px;
-        display: flex;
-        align-items: center;
-        margin: 0;
     }
     #terms_links, #terms_links a{
-        font-size: 25px;
-        text-decoration: none;
-        color: white;
-        margin: 0;
-        transition: 0.25s;
-    }
-    #terms_links a:hover{
-        text-decoration: underline;
-    }
-    #footer_copy{
         font-size: 20px;
-        text-decoration: none;
-        color: white;
-        margin: 20px 0 0;
     }
     /*---------- footer end ----------*/
 }
